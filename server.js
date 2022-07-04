@@ -3,7 +3,7 @@ const fs = require('fs');
 const htp = require('http');
 const port = process.env.PORT || 3000;
 
-// Author : Rohit Raj (iDevLabs)
+// Author : Rohit Raj (CodzLab)
 // Js server req => res (v1.0)
 
 
@@ -42,6 +42,7 @@ const server = htp.createServer((req, res) => {
         const land = fs.readFileSync('src/about.html');
         res.end(land.toString());
     }
+    // as above 'else if' statement, you can add according to your needation
     else{
         res.statusCode=404;
         // const ntf = fs.readFileSync('404.html');
