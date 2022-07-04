@@ -1,0 +1,14 @@
+/*  This code contain the Utility like margin padding etc of web-content */
+
+.mxWid1{
+    max-width: 86vw;
+}
+
+.mxWid2{
+    max-width: 64vw;
+}
+
+.mAto{
+    margin: auto;
+}
+

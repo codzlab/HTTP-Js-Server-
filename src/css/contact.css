@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* max-width: fit-content; */
+}
+
+.mxWid1{
+    max-width: 86vw;
+}
+
+.mxWid2{
+    max-width: 64vw;
+}
+
+.mAto{
+    margin: auto;
+}
+
+nav {
+    height: 25px;
+    background-color: crimson;
+}
+
+main {
+    height: 85px;
+    background-color: coral;
+}
+
+footer {
+    height: 50px;
+    background-color: rgb(20, 49, 92);
+}
