@@ -12,3 +12,9 @@ The HTTP Js Server for File sharing
 
 * Happy Coing :)
 ```
+# Note*
+```
+- This Code Works as URL base i.e. (localhost:3000/home)
+- Won't response when you'll try to do (localhost:3000/index.html)
+- This Code allows only file sharing with secuering your other data base
+```
