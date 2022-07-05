@@ -51,7 +51,7 @@ const server = htp.createServer((req, res) => {
 });
 
 server.listen(port, () => {
-    console.log(`Server running at ${port} port. Develope by Rohit Raj`);
+    console.log(`Server running at ${port} port (http://localhost:${port}). Develope by Rohit Raj`);
 });
 
 
