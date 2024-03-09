@@ -3,7 +3,7 @@ const fs = require('fs');
 const htp = require('http');
 const port = process.env.PORT || 3000;
 
-// Author : Rohit Raj (CodzLab)
+// Author : CodzLab
 // Js server req => res (v1.0)
 
 
@@ -51,7 +51,7 @@ const server = htp.createServer((req, res) => {
 });
 
 server.listen(port, () => {
-    console.log(`Server running at ${port} port (http://localhost:${port}). Develope by Rohit Raj`);
+    console.log(`Server running at ${port} port (http://localhost:${port}). Develope by Codzlab`);
 });
 
 
