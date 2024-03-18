@@ -1,5 +1,5 @@
-# HTTP-Js-Server-
-The HTTP Js Server for File sharing
+# HTTP-Js-Server-(mangaing url of files and docements)
+The HTTP Js Server for File sharing.Mange your project's files and documents url. 
 
 ## How to use
 ```
