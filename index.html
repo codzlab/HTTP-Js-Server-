@@ -1,36 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>codzlab server testing</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/utils.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  background: #282c34;
+}
+
+main {
+  font-size: 2vmin;
+  font-family: JetBrains Mono, monospace;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e4bb68;
+}
+
+.string {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  animation: move 4s infinite;
+}
+
+.greeting {
+  position: relative;
+  top: 8.6vmin;
+  animation: white-out 5s infinite;
+}
+
+.closure::after {
+  content: '';
+  position: absolute;
+  height: 25vmin;
+  width: 40vmin;
+  background: #282c34;
+  transform: translate(-45vmin, -24.5vmin);
+}
+
+.closure::before {
+  content: '';
+  position: absolute;
+  height: 25vmin;
+  width: 40vmin;
+  background: #282c34;
+  transform: translate(-40vmin, 5vmin);
+}
+
+.en {
+  color: #fa8231;
+}
+
+.es {
+  color: white;
+}
+
+.de {
+  color: #c678dd;
+}
+
+.it {
+  color: #a9b0bd;
+}
+
+@keyframes move {
+  25% {
+    transform: translatey(-5.8vmin);
+    opacity: 1;
+  }
+  50% {
+    transform: translatey(-11vmin);
+  }
+  75% {
+    transform: translatey(-16.5vmin);
+  }
+}
+    </style>
 </head>
 <body>
-    <nav class=""> 
-        <div class="nbLft">
-            <ul>
-                <li><a href="/" src="codzlab.github.io">Home</a></li>
-                <li><a href="/js-server/src/blog">Blog</a></li>
-                <li><a href="/js-server/src/contact">Contact</a></li>
-                <li><a href="/js-server/src/about">About</a></li>
-            </ul>
-        </div>
-        <div class="nbRit">
-            <input type="search" placeholder="search here...." >&emsp;
-            <button>search</button>&emsp;
-            <button disabled="disabled">Get Start</button>
-        </div>
-    </nav>
-    <main class="mxWid2 mAto">
-    </main>
-    <footer class="mxWid1 mAto"> &copy; codzlab
-    </footer>
+    <main>
+    <h1>System<span style="color:white;">.<span style="color:#e06c75;">out</span>.</span><span style="color:#61afef;">println</span>("</h1>
+<div class="string">
+  <h1 class="greeting en">Hello there!</h1>
+  <h1 class="greeting es">The time is</h1>
+  <h1 class="greeting de" id="clock"></h1>
+  <h1 class="greeting it">& I'm coding!</h1>  
+</div>
+<h1 class="closure">");</h1>
+</main>
 </body>
-    <script>
-   
 
-
+<script>
+    function updateTime() {
+      const now = new Date();
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      let seconds = now.getSeconds();
+      let milliseconds = now.getMilliseconds();
+      let amPm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12 || 12;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+      milliseconds = milliseconds.toString().padStart(3, '0').slice(0, 2);
   
-
-    </script>
+      document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}:${milliseconds} ${amPm}`;
+    }
+  
+    function updateDayCount() {
+      const now = new Date();
+      const startDate = new Date("2024-03-18"); // Set your start date here
+      const daysDifference = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
+      
+      document.getElementById('dayCount').textContent = `Day ${daysDifference + 1}`;
+    }
+  
+    updateTime();
+    setInterval(updateTime, 1);
+  
+    updateDayCount();
+    setInterval(updateDayCount, 1000 * 60 * 60 * 24); // Update every 24 hours
+  </script>
 </html>
