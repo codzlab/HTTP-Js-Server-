@@ -21,7 +21,7 @@ const server = htp.createServer((req, res) => {
     else if (req.url=='/home')
     {
         res.statusCode=200;
-        const land = fs.readFileSync('https://codzlab.github.io/in.html');
+        const land = fs.readFileSync('index.html');
         res.end(land.toString());
     }
     else if (req.url=='/blog')
